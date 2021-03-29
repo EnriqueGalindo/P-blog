@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom";
 import { getFirebase } from "../firebase";
-// import bannerImage from "./BannerDrawnVer.png"
+import bannerImage from "./BannerDrawn.png"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -38,7 +38,7 @@ console.log(getFirebase())
     <>
       <section className="top-banner-section">
         <div className="banner-image-div">
-          {/* <img className="banner-image" src={bannerImage} /> */}
+          <img className="banner-image" src={bannerImage} />
         </div>
         <div className="banner-overlay-div"></div>
         <div className="banner-text-div">
