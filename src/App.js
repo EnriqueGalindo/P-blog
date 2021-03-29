@@ -6,23 +6,29 @@ import Home from "./pages/home";
 import Create from "./pages/create";
 import Post from "./pages/post";
 import NoMatch from "./pages/no-match";
+import Login from "./pages/login";
+import { AuthProvider } from "./context/AuthContext";
+import PrivateRoute from "./pages/privateRoute"
 
 function App() {
   return (
     <Router>
       <nav>
         <Link to="/">
-          <h2>My React + Firebase Blog</h2>
+          <h2>Enrique Galindo</h2>
         </Link>
       </nav>
+        <AuthProvider>
+          <Switch>
+            <Route exact path="/" component={Home} />
       <main>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/create" component={Create} />
-          <Route path="/404" component={NoMatch} />
-          <Route path="/:slug" component={Post} />
-        </Switch>
+            <PrivateRoute path="/create" component={Create} />
+            <Route path="/login" component={Login} />
+            <Route path="/404" component={NoMatch} />
+            <Route path="/:slug" component={Post} />
       </main>
+          </Switch>
+        </AuthProvider>
     </Router>
   );
 }

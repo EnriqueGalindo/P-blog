@@ -38,7 +38,8 @@ const generateDate = () => {
   };
 };
 
-const Create = () => {
+
+const Create = ({history}) => {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [coverImage, setCoverImage] = useState("");
@@ -60,8 +61,10 @@ const Create = () => {
       .database()
       .ref()
       .child(`posts/${slug}`)
-      .set(newPost);
+      .set(newPost)
+      .then(() => history.push(`/`));
   };
+
 
   return (
     <>

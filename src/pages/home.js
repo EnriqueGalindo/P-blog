@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Card, Button, Alert } from "react-bootstrap"
+import { Link, useHistory } from "react-router-dom";
 import { getFirebase } from "../firebase";
+// import bannerImage from "./BannerDrawnVer.png"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [blogPosts, setBlogPosts] = useState([]);
+  const history = useHistory()
+
 
   if (loading && !blogPosts.length) {
     getFirebase()
@@ -30,13 +33,25 @@ const Home = () => {
     return <h1>Loading...</h1>;
   }
 
-
+console.log(getFirebase())
   return (
     <>
-      <h1>Blog posts</h1>
-      <p>
-        Welcome to the starter code! We're showing hard-coded data right now.
-      </p>
+      <section className="top-banner-section">
+        <div className="banner-image-div">
+          {/* <img className="banner-image" src={bannerImage} /> */}
+        </div>
+        <div className="banner-overlay-div"></div>
+        <div className="banner-text-div">
+          <span className="banner-text">
+            <p className="banner-h1-text">A Personal Blog: Diving Into Tech</p>
+            <p className="banner-body-text">My stories and experiences taking a non-traditional route in tech</p>
+            <br></br>
+            <p>Banner art by Tanner Hebbel</p>
+          </span>
+        </div>
+      </section>
+     
+      <main>
       {blogPosts.map(blogPost => (
         <section key={blogPost.slug} className="card">
           <img src={blogPost.coverImage} alt={blogPost.coverImageAlt} />
@@ -54,6 +69,7 @@ const Home = () => {
           </div>
         </section>
       ))}
+      </main>
     </>
   );
 };
