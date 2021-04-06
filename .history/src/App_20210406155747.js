@@ -21,10 +21,12 @@ function App() {
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={Home} />
+      <main>
             <PrivateRoute path="/create" component={Create} />
             <Route path="/login" component={Login} />
             <Route path="/404" component={NoMatch} />
             <Route path="/:slug" component={Post} />
+      </main>
           </Switch>
         </AuthProvider>
     </Router>

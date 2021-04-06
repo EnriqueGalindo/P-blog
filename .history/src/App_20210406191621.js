@@ -25,6 +25,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/404" component={NoMatch} />
             <Route path="/:slug" component={Post} />
+      </main>
           </Switch>
         </AuthProvider>
     </Router>
