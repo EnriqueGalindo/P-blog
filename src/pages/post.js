@@ -33,7 +33,7 @@ const Post = ({ match }) => {
 
   return (
     <>
-      <img src={currentPost.coverImage} alt={currentPost.coverImageAlt}></img>
+      <img className="banner-image" src={currentPost.coverImage} alt={currentPost.coverImageAlt}></img>
       <h1>{currentPost.title}</h1>
       <em>{currentPost.datePretty}</em>
       <p dangerouslySetInnerHTML={{ __html: currentPost.content }}></p>
