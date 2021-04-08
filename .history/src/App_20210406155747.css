@@ -87,7 +87,7 @@ main {
 }
 
 .banner-h1-text {
-  font-size: calc(20pt + 0.15vw);
+  font-size: calc(10pt + 0.15vw);
   letter-spacing: 0.05em;
   font-weight: bolder;
   text-transform: uppercase;
@@ -134,14 +134,4 @@ main {
   &:visited {
     text-decoration: none;
   }
-}
-
-.banner-credit {
-  text-align: end;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  margin-top: 100px;
-  margin-bottom: auto;
-  opacity: 0.3;
 }

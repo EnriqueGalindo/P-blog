@@ -142,6 +142,5 @@ main {
   flex-direction: column-reverse;
   justify-content: space-between;
   margin-top: 100px;
-  margin-bottom: auto;
-  opacity: 0.3;
+  margin-bottom: ;
 }

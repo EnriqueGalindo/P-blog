@@ -46,7 +46,7 @@ console.log(getFirebase())
             <p className="banner-h1-text">Script Kiddie 2 GOAT</p>
             <p className="banner-body-text">My stories and experiences taking a non-traditional route in tech</p>
             <br></br>
-            <p className="banner-credit">Banner art by Tanner Hebbel</p>
+            <p className>Banner art by Tanner Hebbel</p>
           </span>
         </div>
       </section>

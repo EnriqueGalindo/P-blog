@@ -33,12 +33,10 @@ const Post = ({ match }) => {
 
   return (
     <>
-      <main>
-        <img className="banner-image" src={currentPost.coverImage} alt={currentPost.coverImageAlt}></img>
-        <h1>{currentPost.title}</h1>
-        <em>{currentPost.datePretty}</em>
-        <p dangerouslySetInnerHTML={{ __html: currentPost.content }}></p>
-      </main>
+      <img className="banner-image" src={currentPost.coverImage} alt={currentPost.coverImageAlt}></img>
+      <h1>{currentPost.title}</h1>
+      <em>{currentPost.datePretty}</em>
+      <p style={margin: auto} dangerouslySetInnerHTML={{ __html: currentPost.content }}></p>
     </>
   );
 };

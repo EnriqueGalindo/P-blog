@@ -135,13 +135,3 @@ main {
     text-decoration: none;
   }
 }
-
-.banner-credit {
-  text-align: end;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  margin-top: 100px;
-  margin-bottom: auto;
-  opacity: 0.3;
-}
