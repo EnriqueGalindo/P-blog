@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom";
 import { getFirebase } from "../firebase";
-import bannerImage from "./BannerDrawn.png"
+import bannerImage from "./BannerDrawn.png";
+import MetaTags from "../context/components/metatags";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ const Home = () => {
 console.log(getFirebase())
   return (
     <>
+      <MetaTags />
       <section className="top-banner-section">
         <div className="banner-image-div">
           <img className="banner-image" src={bannerImage} />

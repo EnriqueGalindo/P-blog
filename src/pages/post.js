@@ -33,6 +33,7 @@ const Post = ({ match }) => {
 
   return (
     <>
+      <MetaTags currentPost />
       <img className="banner-image" src={currentPost.coverImage} alt={currentPost.coverImageAlt}></img>
       <h1>{currentPost.title}</h1>
       <em>{currentPost.datePretty}</em>

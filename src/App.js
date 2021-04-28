@@ -8,10 +8,12 @@ import Post from "./pages/post";
 import NoMatch from "./pages/no-match";
 import Login from "./pages/login";
 import { AuthProvider } from "./context/AuthContext";
-import PrivateRoute from "./pages/privateRoute"
+import PrivateRoute from "./pages/privateRoute";
+import {Helmet} from 'react-helmet';
 
 function App() {
   return (
+    <>
     <Router>
       <nav>
         <Link to="/">
@@ -23,13 +25,14 @@ function App() {
             <Route exact path="/" component={Home} />
       <main>
             <PrivateRoute path="/create" component={Create} />
-            <Route path="/login" component={Login} />
+            <Route path="/login" component={Login} /> {/* Also private rout? */}
             <Route path="/404" component={NoMatch} />
             <Route path="/:slug" component={Post} />
       </main>
           </Switch>
         </AuthProvider>
     </Router>
+    </>
   );
 }
 
