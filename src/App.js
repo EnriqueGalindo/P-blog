@@ -9,7 +9,6 @@ import NoMatch from "./pages/no-match";
 import Login from "./pages/login";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./pages/privateRoute";
-import {Helmet} from 'react-helmet';
 
 function App() {
   return (
