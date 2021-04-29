@@ -1,7 +1,7 @@
 import React from 'react';
 import {Helmet} from 'react-helmet';
 
-const MetaTags = (post) => {
+const MetaTags = ( {post} ) => {
     // Note: The manifest is the 'creat-react-app' manifest.
     // Adding it in the head wouldn't matter until it were filled out.
     // basically, if someone wants a shortcut to your blog on their phone screen,
