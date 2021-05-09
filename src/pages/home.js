@@ -3,6 +3,7 @@ import { Card, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom";
 import { getFirebase } from "../firebase";
 import bannerImage from "./BannerDrawn.png"
+import Seo from "../seo_helmet"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -43,7 +44,7 @@ console.log(getFirebase())
         <div className="banner-overlay-div"></div>
         <div className="banner-text-div">
           <span className="banner-text">
-            <p className="banner-h1-text">Script Kiddie 2 GOAT</p>
+            <Seo className="banner-h1-text" title="Script Kiddie 2 GOAT">Script Kiddie 2 GOAT</Seo>
             <p className="banner-body-text">My stories and experiences taking a non-traditional route in tech</p>
             <br></br>
             <p className="banner-credit">Banner art by Tanner Hebbel</p>
