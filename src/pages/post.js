@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { getFirebase } from "../firebase";
-import Seo from "../seo_helmet";
 
 const Post = ({ match }) => {
   const slug = match.params.slug;
