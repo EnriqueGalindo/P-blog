@@ -54,6 +54,7 @@ console.log(getFirebase())
       <main>
       {blogPosts.map(blogPost => (
         <section key={blogPost.slug} className="card">
+        <Link to={`/${blogPost.slug}`}>
           <img src={blogPost.coverImage} alt={blogPost.coverImageAlt} />
           <div className="card-content">
             <h2>
@@ -67,6 +68,7 @@ console.log(getFirebase())
             ></p>
             <Link to={`/${blogPost.slug}`}>Continue reading...</Link>
           </div>
+          </Link>
         </section>
       ))}
       </main>
