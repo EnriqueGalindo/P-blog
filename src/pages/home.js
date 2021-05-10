@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { getFirebase } from "../firebase";
-import bannerImage from "./BannerDrawn.png"
+import bannerImage from "../images/BannerDrawn.png"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
