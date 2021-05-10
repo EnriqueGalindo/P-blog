@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { getFirebase } from "../firebase";
+import AboutTheAuthor from "../components/aboutTheAuthor"
 
 const Post = ({ match }) => {
   const slug = match.params.slug;
@@ -39,6 +40,7 @@ const Post = ({ match }) => {
         <em>{currentPost.datePretty}</em>
         <p dangerouslySetInnerHTML={{ __html: currentPost.content }}></p>
       </main>
+      <AboutTheAuthor />
     </>
   );
 };
