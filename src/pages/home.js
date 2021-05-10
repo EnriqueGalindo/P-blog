@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Card, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom";
 import { getFirebase } from "../firebase";
 import bannerImage from "./BannerDrawn.png"
